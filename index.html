@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../template/assets/img/ico.png" type="image/png">
+    <link rel="icon" href="https://gesprender.com/app/template/assets/img/ico.png" type="image/png">
     <!-- font Awasome-->
     <script src="https://kit.fontawesome.com/fb56d1a6d2.js" crossorigin="anonymous"></script>
     <!-- Bootstrap 5 -->
@@ -17,12 +17,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Estilos -->
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/componente.css">
+    <link rel="stylesheet" href="./template/assets/css/style.css">
+    <link rel="stylesheet" href="./template/modules/module/componente.css">
+    <link rel="stylesheet" href="./template/modules/expenses/expenses.css">
     <!-- React CDN -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script type='text/javascript' src='./js/babel.js'></script>
+    <script type='text/javascript' src='./template/assets/js/reactDev.js'></script>
+    <script type='text/javascript' src='./template/assets/js/reactDom.js'></script>
+    <script type='text/javascript' src='./template/assets/js/babel.js'></script>
 </head>
 <body>
     
@@ -30,16 +31,16 @@
         <!-- Sidebar -->
         <div class="sidebar">
             <div class="sidebar-top">
-                <div class="logo"><img src="../template/assets/img/logo/ico-white.png" alt=""></div>
+                <div class="logo"><img src="https://gesprender.com/app/template/assets/img/logo/ico-white.png" alt=""></div>
                 
             </div>
             <div class="sidebar-bot">
                 <ul>
                     <a href="" data-bs-toggle="tooltip" data-bs-placement="right" title="Notifications">
-                        <img src="../template/assets/img/icons/menu/notifications.png" alt="Notificaciones">
+                        <img src="https://gesprender.com/app/template/assets/img/icons/menu/notifications.png" alt="Notificaciones">
                     </a>
                     <a href="" data-bs-toggle="tooltip" data-bs-placement="right" title="Configuracion">
-                        <img src="../template/assets/img/icons/menu/config.png" alt="Configuracion">
+                        <img src="https://gesprender.com/app/template/assets/img/icons/menu/config.png" alt="Configuracion">
                     </a>
                 </ul>
             </div>
@@ -54,7 +55,7 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Buscador -->
                     <form class="d-flex mleft-7 buscador-nav" onsubmit="event.preventDefault()">
-                        <div class="input-group-text"><img src="../template/assets/img/icons/lupa-x16.png" alt=""></div>
+                        <div class="input-group-text"><img src="https://gesprender.com/app/template/assets/img/icons/lupa-x16.png" alt=""></div>
                         <input class="form-control me-2 fs-8" type="search" name="" id="" placeholder="Busca rapidamente en tu negocio" autocomplete="off" aria-label="Search">
                         <button type="submit" class="btn btn-primary">Buscar</button>
                     </form>
@@ -63,42 +64,12 @@
                     </ul>
                     <!-- Right nav menu -->
                     <ul class="navbar-nav logoPerfil">
-                      <li class="nav-item dropdown dropdown-register">
-                        <button type="submit" class="btn btn-primary"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">+ Registrar</button>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="menu-drop-d-registrar">
-                            <a class="drop-d-registrar " href="javascript:;" onclick="addVenta()" role="button">
-                                <li class="dropdown-item"> Venta</li>
-                                <img src="../template/assets/img/icons/menu/menu_venta.png" alt="">
-                            </a>
-                            <hr>
-                            <a class="drop-d-registrar " href="javascript:;" onclick="addVenta()" role="button">
-                                <li class="dropdown-item"> Gasto</li>
-                                <img src="../template/assets/img/icons/menu/menu_gastos.png" alt="">
-                            </a>
-                            <hr>
-                            <a class="drop-d-registrar " href="javascript:;" onclick="addVenta()" role="button">
-                                <li class="dropdown-item"> Cliente</li>
-                                <img src="../template/assets/img/icons/menu/menu_clientes.png" alt="">
-                            </a>
-                            <hr>
-                            <a class="drop-d-registrar " href="javascript:;" onclick="addVenta()" role="button">
-                                <li class="dropdown-item"> Producto</li>
-                                <img src="../template/assets/img/icons/menu/menu_producto.png" alt="">
-                            </a>
-                            <hr>
-                            <a class="drop-d-registrar " href="javascript:;" onclick="addVenta()" role="button">
-                                <li class="dropdown-item"> Reporte</li>
-                                <img src="../template/assets/img/icons/menu/menu_reporte.png" alt="">
-                            </a>
-                        </ul>
-                      </li>
-                      
                       <li class="nav-item dropdown ml-3 nav-items-img-left logoPerfil">
-                          <div class="logoIMG"><img class="imagenBusiness " src="../template/assets/img/logo/ico.png" alt="Logo de perfil" ></div>
+                          <div class="logoIMG"><img class="imagenBusiness " src="https://gesprender.com/app/template/assets/img/logo/ico.png" alt="Logo de perfil" ></div>
                           GesPrender.com 
                           <a class="nav-link active dropdown-toggle logoPerfil" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <div class="logoIMG">
-                                <img class="imagenPerfil" src="https://smilehome.cl/wp-content/uploads/2020/09/ac_generico.jpg" alt="Logo de perfil"></div>
+                                <img class="imagenPerfil" src="https://gesprender.com/app/template/assets/img/logo/ico.png" alt="Logo de perfil"></div>
                             </a>
                             <ul class="dropdown-menu mt-0" aria-labelledby="navbarDropdown">
                               <li><a class="dropdown-item" href="edit-profile.php">Configuracion</a></li>
@@ -112,98 +83,7 @@
                 </div>
             </nav>
 
-            <!-- Nav Mobile -->
-            <div id="navMenuMovil">
-                <div class="card my-0 " class="navMenu">
-                  <div class="card-body py-0">
-                    <nav class="navbar">
-
-                        <!-- nav menu-->
-                        <div class="menu-btn ">
-                            <a data-bs-toggle="offcanvas" href="#sidebar-menu-mobile" role="button" aria-controls="sidebar-menu-mobile"><i class="fas fa-bars fa-2x"></i></a>
-                            
-                        </div>
-
-                        <ul class="nav justify-content-center ">
-                            <li class="nav-item">
-                                <a class="nav-link"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <i class="fas fa-plus"></i>
-                                    Registrar</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="pages/edit-profile.php"><i class="fas fa-cog"></i></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="?salir=1"><i class="fas fa-sign-in-alt"></i></a>
-                            </li>      
-                        </ul>
-
-                    </nav>
-                  </div>
-                </div>
-
-                <!-- Atajos -->
-                <div class="accordion my-1" id="accordion_register_nav">
-                    <div class="accordion-item" id="accordion_register_nav">
-                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body py-0 px-0">
-                            <ul class="nav">
-                                <li class="nav-item"><a class="nav-link py-1 px-1" href="javascript:;" onclick="addVenta()" role="button">+ Venta</a></li>
-                                <li class="nav-item"><a class="nav-link py-1 px-1" href="javascript:;" onclick="addGasto()" role="button">+ Gasto</a></li>
-                                <li class="nav-item"><a class="nav-link py-1 px-1" href="javascript:;" onclick="addStock()" role="button">+ Gasto de Stock</a></li>
-                                <li class="nav-item"><a class="nav-link py-1 px-1" href="javascript:;" onclick="addCliente()" role="button">+ Cliente</a></li>
-                                <li class="nav-item"><a class="nav-link py-1 px-1" href="javascript:;" onclick="addProducto()" role="button">+ Producto</a></li>   
-                            </ul>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-
-                <!-- Menu hamburguesa V. Mobile -->                  
-                  <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar-menu-mobile" aria-labelledby="sidebar-menu-mobileLabel">
-                    <div class="offcanvas-header">
-                      <h6 class="offcanvas-title" id="sidebar-menu-mobileLabel">A donde quieres ir?</h6>
-                      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-
-                        <!-- Buscador V. Mobile -->
-                        <form class="d-flex mb-1" onsubmit="event.preventDefault()">
-                            <input class="form-control me-2" type="search" name="searchClienteVM" id="searchClienteVM" placeholder="Buscar cliente..." autocomplete="off" aria-label="Search">
-                            <input type="hidden" name="idVM" id="idVM" value="#">
-                        </form>
-
-                        <!-- Sidebar -->
-                        <div class="menu-sidebar-mobile">
-                            <a href="">
-                                <img src="../template/assets/img/icons/menu/dashboard.png" alt="">
-                                <li>Escritorio </li>
-                            </a>
-                            <a href="">
-                                <img src="../template/assets/img/icons/menu/sales.png" alt="">
-                                <li>Ventas <span class="badge bg-primary">2</span></li>
-                            </a>
-                            <a href="">
-                                <img src="../template/assets/img/icons/menu/expenses.png" alt="">
-                                <li>Gastos <span class="badge bg-primary">2</span></li>
-                            </a>
-                            <a href="">
-                                <img src="../template/assets/img/icons/menu/clients.png" alt="">
-                                <li>Clientes <span class="badge bg-primary">2</span></li>
-                            </a>
-                            <a href="">
-                                <img src="../template/assets/img/icons/menu/products.png" alt="">
-                                <li>Productos <span class="badge bg-primary">2</span></li>
-                            </a>
-                            <a href="">
-                                <img src="../template/assets/img/icons/menu/catalog.png" alt="">
-                                <li>Catalogo </li>
-                            </a>
-                            </ul>
-                        </div>
-                    </div>
-                  </div>
-            </div>
+            
 
             <!-- Contenido de cada pagina -->
             <div class="body " id="modulo">
@@ -222,14 +102,13 @@
         </div>
     </div>
 
-    <script data-plugins='transform-es2015-modules-umd' type='text/babel' src='./components/module.jsx'></script>
+    <script data-plugins='transform-es2015-modules-umd' type='text/babel' src='./template/globals/CustomComponents.jsx'></script>
+    <script data-plugins='transform-es2015-modules-umd' type='text/babel' src='./template/globals/CustomHooks.jsx'></script>
+    <script data-plugins='transform-es2015-modules-umd' type='text/babel' src='./template/modules/module/module.jsx'></script>
 <!-- Sweet Alert2 -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <!-- Bootstrap script -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>    
-<!-- Custom Scripts -->
-<script type="text/javascript" src="assets/js/notifications.js"></script>
-<script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 </html>
