@@ -4,12 +4,19 @@ const { useState, useEffect, createContext, useContext, useRef } = React;
 const App = () => {
 
     return (
-        <h1>hola</h1>
+        <div>
+            <Compo />
+        </div>
     )
 }
 
+const Compo = () => {
+    return (
+        <h2>hola aca estoy render</h2>
+    );
+}
 
 
 // Rendering
-const module = document.querySelector('#module');
+const module = document.querySelector('#modulo');
 ReactDOM.render(<App />, module);
