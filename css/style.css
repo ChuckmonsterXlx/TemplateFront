@@ -1,0 +1,1008 @@
+/*========================================================================
+|  Variables
+|
+=========================================================================*/
+:root {
+    --borde: #dddfe2;
+    --cLetra1: #545a5c;
+    --cLetra2: #595d5e;
+    --verde : #97F06C;
+    --verdeOscuro : #5dd477;
+    --celeste : #6ED0F0;
+    --azul : #4e73df;
+    --amarillo : #F0D26A;
+    --lila : #A269F0;
+    --rojo : #F0877D;
+    --blanco : #f9fafc;
+    --oscuro : #222222;
+    --negro163:rgb(136, 136, 136);
+    
+    --negro : #000;
+    --negro600 : #4b5563;
+    --blanco: #fff;
+    --blanco-2: #f2f2f2;
+    --gris1: #D1D5DB;
+    --azul1: #D3E2FC;
+    --azul2: #90B8FC;
+    --azul3: #4285F4;
+    --azul4: #175ED3;
+    --azul5: #0444AE;
+}
+
+/*========================================================================
+|  Generales
+|
+=========================================================================*/
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Fredoka', sans-serif;
+    background-color: #f9fafc;
+}
+a {
+    text-decoration: none;
+}
+.contenedor {
+    position: absolute;
+    padding: 100px 20px 0 90px;
+    width: 100%;
+}
+.botonBorrarEditar {
+    border: none;
+    background: none;
+}
+hr {
+    color: #b8b8b8;
+}
+/*========================================================================
+|  Custom
+|
+=========================================================================*/
+.b {
+    border: red solid 1px;
+}
+
+.resaltar {
+    font-weight: 800;
+}
+/* Grids */
+.contenedor-grid {
+    display: grid;
+    grid-template-columns: 60px auto;
+    min-height: 100vh;
+}
+.grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+/* Margin & padding */
+.mleft-7 {
+    margin-left: 70px;
+}
+/* Fuentes y texto */
+.text-center {
+    text-align: center;
+}
+.fs-8 {
+    font-size: 14px;
+}
+.fw-5 {
+    font-weight: 500;
+}
+.fw-6 {
+    font-weight: 600;
+}
+/* Colores y backgrounds */
+.c-negro {
+    color: var(--negro);
+}
+.flex_center {
+    display: flex;
+    justify-content: center;
+}
+.view_in_mobile {
+    display: none;
+}
+/*========================================================================
+|  Override Bootstrap
+|
+=========================================================================*/
+.container {
+    max-width: none;
+}
+.buscador-nav >.form-control {
+    width: 300px;
+    border-radius: 0 25px 25px 0;
+    background: var(--blanco);
+    border: none;
+    border-bottom: 1px solid #ced4da;
+    border-top: 1px solid #ced4da;
+    border-right: 1px solid #ced4da;
+    padding-left: 0;
+}
+.buscador-nav >.input-group-text {
+    background: none;
+    border-radius: 25px 0 0 25px;
+    border: none;
+    border-left: 1px solid #ced4da;
+    border-top: 1px solid #ced4da;
+    border-bottom: 1px solid #ced4da;
+}
+.buscador-nav >.btn {
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 300;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.dropdown-register > .btn {
+    background: var(--azul4);
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 300;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.logoPerfil > .dropdown-menu[data-bs-popper] {
+    top: 130%;
+    left: auto;
+    right: 0;
+}
+.dropdown-item:hover {
+    background: none;
+}
+.dropdown-register > .dropdown-menu[data-bs-popper] {
+    top: 145%;
+}
+.modal {
+    top: auto;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--azul3);
+    border-color: var(--azul4);
+    padding: 2px 8px;
+}
+.navbar {
+    padding: 2px;
+    margin: 0;
+    border-radius: 0;
+}
+/*========================================================================
+|  Nav 
+|
+=========================================================================*/
+.menu-btn {
+    position: fixed;
+    cursor: pointer;
+    top: 8px;
+    right: 30px;
+    z-index: 0;
+    display: none;
+    color: #4e4e4e;
+}
+
+#navMenuMovil{
+    display: none;
+}
+#navMenuMovil > .card {
+    border-radius: 0;
+}
+.logoPerfil{
+    display: flex;
+    place-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 0;
+    color: #222222;
+}
+.logoPerfil .imagenPerfil{
+    width: 44px;
+    border-radius: 50%;
+    margin: 3px 5px 3px 30px;
+}
+.logoPerfil .imagenBusiness {
+    width: 40px;
+    border-radius: 50%;
+    margin: 3px 10px;
+    border: var(--azul2) solid 1px;
+}
+#navMenu {
+    box-shadow: -7px -4px 20px 0px #393939;
+    z-index: 1;
+    background: var(--blanco);
+}
+.dropdown-register {
+    margin-right: 20px;
+    padding-right: 30px;
+    border-right: rgb(229, 229, 229) solid 1px;
+}
+.nav-items-img-left {
+    margin-right: 50px;
+}
+.drop-d-registrar {
+    display: flex;
+    margin: 0px 10px 0 10px;
+    align-items: center;
+    width: auto;
+}
+.drop-d-registrar > img {
+    width: 20px;
+    height: 20px;
+}
+#menu-drop-d-registrar {
+    width: 230px;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    padding: 10px ;
+    border-radius: 15px;
+}
+#menu-drop-d-registrar a {
+    border-radius: 15px;
+    padding: 5px 15px 5px 5px;
+}
+#menu-drop-d-registrar a:hover {
+    background: var(--azul1);
+}
+#menu-drop-d-registrar > hr {
+    width: 90%;
+    margin: 10px 0;
+    text-align: center;
+    color: var(--azul1);
+}
+.img_profile_nav {
+    width: 50px;
+    height: 50px;
+    background: var(--azul2);
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 50%;
+}
+/*========================================================================
+|  Sidebar 
+|
+=========================================================================*/
+
+.contenedor-grid .sidebar {
+    background-color: var(--azul3);
+    color: var(--blanco);
+    z-index: 2;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    place-content: space-between;
+}
+.contenedor-grid .sidebar .sidebar-bot {
+    margin-bottom: 30px;
+}
+.contenedor-grid .sidebar .logo {
+    margin: 15px 10px 0 10px;
+    padding-bottom: 15px;
+    border-bottom: rgba(255, 255, 255, 0.353) solid 1px;
+}
+.contenedor-grid .sidebar .logo > img {
+    height: 50px;
+}
+.contenedor-grid .sidebar ul {
+    margin: 10px 0 0 0 ;
+    padding-left: 0;
+    list-style: none;
+}
+.contenedor-grid .sidebar ul a {
+    margin: 0;
+    padding: 5px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 600ms;
+}
+.contenedor-grid .sidebar ul a > .name_module {
+    font-size: 12px;
+    color: #fff;
+}
+.contenedor-grid .sidebar ul a > img {
+    width: 40px;
+    color: var(--blanco);
+    padding: 8px;
+}
+.contenedor-grid .sidebar ul a > img:hover {
+    background: var(--azul5);
+    border-radius: 10px;
+}
+.sidebar-menu-active {
+    background: var(--azul5);
+    border-radius: 10px;
+}
+.contenedor-grid .sidebar ul a li{
+    display: none;
+    margin-left: 20px;
+    color: var(--blanco);
+}
+.contenedor-grid .sidebar ul a li > span {
+    display: none
+}
+.contenedor-grid .sidebar .user {
+    display: flex;
+}
+.contenedor-grid .sidebar .user ul {
+    display: flex;
+}
+.contenedor-grid .sidebar .user ul li {
+    padding: 0;
+}
+.contenedor-grid .sidebar .user ul li a{
+    padding: 0;
+}
+.contenedor-grid .sidebar .user ul i {
+    padding: 15px;
+}
+.contenedor-grid .sidebar .user ul form button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+/*========================================================================
+|  Contenedor-grid
+|
+=========================================================================*/
+.content {
+    z-index: 2;
+    color: var(--cLetra1);
+    padding: 80px 70px 0 70px;
+    min-height: 100vh;
+}
+/*========================================================================
+|---------------------------[  Footer       ]------------------------------|
+=========================================================================*/
+footer {
+    margin-top: 20px;
+    bottom: 0;
+    padding: 10px 5px;
+    background: #fff;
+    width: 100%;
+    text-align: center;
+    color: rgb(145, 145, 145);
+    border: 1px solid rgba(0,0,0,.125);
+    
+}
+footer .derechos {
+    font-size: 13px;
+}
+footer .derechos a {
+    text-decoration: none;
+    color: rgb(125, 185, 235);
+}
+footer .creditos {
+    font-size: 13px;
+    color: rgb(173, 173, 173);
+}
+footer .creditosAdicionales a {
+    text-decoration: none;
+    color: #dfdfdf;
+}
+
+/*========================================================================
+|  Formularios
+|
+=========================================================================*/
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+input[type=date], input[type=file] {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    padding-left: 15px;
+}
+.formulario input[type=text], input[type=number], input[type=date], input[type=file], .input-file-btn {
+    width: 100%;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+}
+.formulario input[type=submit] {
+    background: #4e73df;
+    padding: 10px 30px;
+    text-align: center;
+    border: none;
+    color: #ffffff;
+    border-radius: 5px;
+}
+input[type=file]{
+    display: flex;
+    /* width: 90%; */
+} 
+.input-file-btn {
+    border: var(--negro600) solid 1px;
+    
+}
+
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .custom-file-input::before {
+    content: 'Subir imagen';
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 3px;
+    padding: 12px 10px;
+    outline: none;
+    white-space: nowrap;
+    user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    display: flex;
+    justify-content: center;
+  }
+  .custom-file-input:hover::before {
+    border-color: black;
+  }
+  .custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }
+
+/*========================================================================
+|  Area de pruebas y test previo a deploy
+|
+=========================================================================*/
+
+
+
+/*====================================================
+|  General
+|
+======================================================*/
+.popup-ventas-container{
+    width: 500px;
+    height: auto;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 30px var(--borde);
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-close-X a{
+    float: right;
+}
+
+.form-registro-popup-ventas form
+{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form-registro-popup-ventas input,
+.form-registro-popup-ventas select,
+.form-registro-popup-ventas button,
+.form-registro-popup-ventas .input-number,
+.form-registro-popup-ventas .input-date
+{
+    border-radius: 50px;
+    width: 100%;
+    height: 45px;
+    padding: 5px;
+}
+
+.form-registro-popup-ventas input,
+.form-registro-popup-ventas select
+{
+    border-style: none;
+    border: 2px solid;
+    border-color: var(--borde);
+}
+
+/*====================================================
+|  Inputs Selectores
+|
+======================================================*/
+
+
+.form-registro-popup-ventas form .select-box .selectors{
+    border-radius: 50px;
+    border: solid 2px var(--borde);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.form-registro-popup-ventas form .select-box .selectors .row-reverse{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.form-registro-popup-ventas form .select-box .options-list .mar-regis{
+    margin: 13px 0;
+    font-size: 1.1rem;
+}
+
+.form-registro-popup-ventas form .select-box .options-list .mar-regis .row-reverse img{
+    width: 1.1rem;
+}
+
+.form-registro-popup-ventas form .select-box .selectors img{
+    margin-right: 6px;
+}
+
+.form-registro-popup-ventas form .select-box .selectors .content-select img{
+    margin-right: 10px;
+}
+
+/*============================================================
+|  Listado Despegable
+|
+======================================================*/
+
+.form-registro-popup-ventas form .select-box .options-list{
+    background-color: #ffffff;
+    width: calc(100% - 20px);
+    height: auto;
+    position: absolute;
+    border: solid 2px var(--borde);
+    border-radius: 25px;
+    margin: 5px 0;
+    padding: 15px;
+    display: none;
+    z-index: 1;
+}
+
+.form-registro-popup-ventas form .select-box .options-list a.option {
+    color: #000;
+}
+
+.form-registro-popup-ventas form .select-box .options-list hr {
+    margin: 5px 0;
+}
+
+.form-registro-popup-ventas form .select-box .options-list .box-option {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5;
+}
+
+.form-registro-popup-ventas form .select-box .options-list.active{
+    display: block;
+}
+
+
+/*====================================================
+|  Lista Despegable de Producto
+|
+======================================================*/
+
+.form-registro-popup-ventas form .select-box .options-list .new-add {
+    display: flex;
+    justify-content: space-between;
+    color: var(--negro163);
+}
+
+.form-registro-popup-ventas form .select-box .options-list .categorys span{
+    font-size: 10px;
+    color: var(--negro163);
+}
+
+
+.form-registro-popup-ventas form .select-box .options-list .categorys .option .box-option div,
+.form-registro-popup-ventas form .select-box .options-list .new-add
+{
+    padding-left: 8px;
+    margin-bottom: 8px;
+}
+
+
+/*====================================================
+|  Lista Despegable de Cliente
+|
+======================================================*/
+
+.form-registro-popup-ventas form .select-box .options-list .new-add.cliente {
+    padding-left: 0;
+}
+
+.form-registro-popup-ventas form .select-box .options-list a.option.cliente .box-option {
+    margin: 10px 0;
+}
+
+
+/*====================================================
+|  Inputs Numericos [General]
+|
+======================================================*/
+
+.inputs-registar-ventas .input-number,
+.inputs-registar-ventas .input-date
+{
+    position: relative;
+}
+
+.inputs-registar-ventas .input-number .content-number .section-derecho,
+.content-number .cantidad-input,
+.inputs-registar-ventas .input-number img,
+.inputs-registar-ventas .input-number input[type=number],
+.inputs-registar-ventas .input-date .date-input,
+.inputs-registar-ventas .input-date img
+{
+    position: absolute;
+}
+
+.form-registro-popup-ventas .input-number,
+.inputs-registar-ventas .input-date
+{
+    padding: 0;
+}
+
+.content-number .cantidad-input{
+    margin: 0;
+    padding-left: 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+    appearance: none;
+}
+
+/*============================================================
+|  Input [(Cantidad)]
+|
+======================================================*/
+
+.inputs-registar-ventas .input-number .content-number .section-derecho{
+    right: 5px;
+    top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inputs-registar-ventas .input-number .content-number .section-derecho .arrows{
+    margin: 0 15px;
+}
+
+.inputs-registar-ventas .input-number .content-number .section-derecho .arrows .next,
+.inputs-registar-ventas .input-number .content-number .section-derecho .arrows .prev
+{
+    height: 8px;
+    width: 8px;
+    cursor: pointer;
+}
+
+.inputs-registar-ventas .input-number .content-number .section-derecho .arrows .next{
+    border-left: solid 2px #6b7280;
+    border-top: solid 2px #6b7280;
+    transform: rotate(45deg);
+}
+
+.inputs-registar-ventas .input-number .content-number .section-derecho .arrows .prev{
+    border-right: solid 2px #6b7280;
+    border-bottom: solid 2px #6b7280;
+    transform: rotate(45deg);
+}
+
+
+
+/*============================================================
+|  Input [(Total)] and [(Fecha)]
+|
+======================================================*/
+
+.inputs-registar-ventas .input-number img,
+.inputs-registar-ventas .input-date img
+{
+    top: 15px;
+    left: 15px;
+}
+
+.inputs-registar-ventas .input-number .total-input,
+.inputs-registar-ventas .input-date .date-input
+{
+    padding-left: 40px;
+}
+
+
+
+/*============================================================
+|  Calendario
+|
+ ======================================================*/
+.calendar{
+    background-color: #ffffff;
+    width: 350px;
+    height: auto;
+    padding: 20px;
+    box-shadow: 0 0 15px var(--borde);
+    border-radius: 15px;
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.calendar.active{
+    display: block;
+}
+
+.year-month,
+.arrows-prev-next
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.year-month{
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.calendar__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 0 3px;
+}
+
+.calendar__month, 
+.calendar__year{
+    padding: 0 3px; 
+}
+
+.calendar__prev{
+    border-top: solid 2px #6b7280;
+    border-left: solid 2px #6b7280;
+    transform: rotate(-45deg);
+}
+
+.calendar__next{
+    border-top: solid 2px #6b7280;
+    border-right: solid 2px #6b7280;
+    transform: rotate(45deg);
+}
+
+.calendar__prev, 
+.calendar__next {
+    height: 10px;
+    width: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.calendar__week, 
+.calendar__dates 
+{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px; 
+}
+
+.calendar__date.calendar__item.day.active{
+    background: var(--azul3);
+    color: #ffffff;
+    width: 35px;
+    height: 35px;
+    border-radius: 14px;
+}
+
+.content-date.months{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px; 
+    font-size: 1.5rem;
+}
+
+.content-date.months .calendar__date.calendar__item.month{
+    cursor: pointer;
+}
+
+.content-date.months .calendar__date.calendar__item.month:hover{
+    background-color: var(--azul1);
+}
+
+
+.calendar__item {
+    text-align: center;
+    line-height: 2; 
+}
+
+.calendar__last-days {
+    opacity: .3; 
+}
+
+.buttons-date-calendar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons-date-calendar button[type=button]{
+    width: 100px;
+}
+
+.buttons-date-calendar button[type=button].btn-secundary{
+    border: 1px solid var(--cLetra1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*========================================================================
+|---------------------------[  Version Movil  ]--------------------------|
+=========================================================================*/
+@media ( max-width: 1024px ){
+    /*====================================================
+    |  General
+    |
+    ======================================================*/
+    body {
+        width: 100%;
+        display: flex;
+    }
+    .contenedor{
+        padding: 0px;
+    }
+    .contenedor-grid {
+        transition: transform .5s ease-in-out ;
+        grid-template-columns: 0px 100%;
+        margin-top: 0px;
+    }
+    /*====================================================
+    |  Estilos solo comportamiento mobile
+    |
+    ======================================================*/
+    .display_none_mobile {
+        display: none;
+    }
+    .width_60_mobile {
+        width: 60%;
+    }
+    .display_flex_column-reverse_mobile {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .display_flex_colum_mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .view_in_mobile {
+        display: flex;
+    }
+    .mobile_fs-12p {
+        font-size: 12px;
+    }
+
+    .offcanvas-end {
+        width: 75%;
+    }
+    /*====================================================
+    |  Nav
+    |
+    ======================================================*/
+    #navMenu {
+        display: none;
+    }
+    #navMenuMovil{
+        display: contents;
+    }
+    #navMenuMovil > .card {
+        background: var(--azul3) ;
+    }
+    .nav-link {
+        color: var(--blanco);
+
+    }
+    .menu-btn {
+        display: flex;
+        position: initial;
+        color: var(--blanco);
+        padding-left: 10px;
+    }
+    .menu-btn > a {
+        color: var(--blanco);
+    }
+    .nav-item > a > img {
+        width: 20px;
+        height: 20px;
+    }
+    #sidebar-menu-mobile {
+        max-width: 50%;
+        background: var(--blanco);
+        color: #222222;
+    }
+    .navMenu {
+        box-shadow: -7px -4px 20px 0px #393939;
+        z-index: 1;
+        background: var(--blanco);
+    }
+    #accordion_register_nav {
+        border: none;
+    }
+    #accordion_register_nav > .show {
+        border: 1px solid rgba(0,0,0,.125);
+    }
+    /*====================================================
+    |  Sidebar
+    |
+    ======================================================*/
+    
+    .contenedor-grid .sidebar {
+        transform: translateX(-70px); 
+    }
+    .menu-sidebar-mobile  {
+        list-style: none;
+    }
+    .menu-sidebar-mobile > a > img {
+        background: #afbaff;
+        padding: 5px;
+        width: 25px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    #sidebar-menu-mobileLabel {
+        color: var(--negro);
+    }
+    .menu-sidebar-mobile > a {
+        display: flex;
+        color: #222222;
+        margin: 20px 0;
+        padding-bottom: 5px;
+        border-bottom: rgba(255, 255, 255, 0.201) solid 1px;
+    }
+    
+}
