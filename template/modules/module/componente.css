@@ -1,0 +1,86 @@
+.titleTab {
+    border: 1px solid #d6d6e5;
+    border-radius: 10px 10px 0px 0px;
+    font-size: 20px;
+    padding: 5px 15px;
+    background: #0000ff17;
+    margin-bottom: 0;
+}
+
+.imgRowUpload {
+    border: 1px solid #d6d6e5;
+    border-top: 0px;
+}
+
+.imgTabContainer {
+    width: 10%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.imgTabContainer .imgContainerBG {
+    width: 100%;
+    border-radius: 100%;
+    background: url(https://www.clipartmax.com/png/middle/110-1104174_computer-icons-user-clip-art-lily-pad-coloring-page.png);
+    height: 94px;
+    min-width: 94px;
+    background-size: 175px;
+    background-position: center;
+}
+
+.btnTabContainer {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+}
+
+.btnTabContainer .btnsContainerDiv {
+    padding-bottom: 20px;
+}
+
+.btnTabContainer p {
+    margin-bottom: 0;
+    color: grey;
+    font-size: 14px;
+}
+
+.btnGlobal {
+    padding: 2px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.btnBlue {
+    border: 1px solid #1b61d4;
+    background-color: #4285f4;
+    color: white;
+}
+.btnWhite {
+    border: 1px solid #4285f4;
+    background-color: white;
+    color: #1b61d4;
+}
+
+.formRow {
+    border: 1px solid #d6d6e5;
+    border-top: 0px;
+    padding: 15px;
+}
+
+.divColForm {
+    padding-bottom: 20px;
+}
+
+.divColForm input {
+    border: 1px solid #d6d6e5;
+    padding: 1px 10px;
+    border-radius: 5px;
+}
+
+.divColForm input:focus{
+    outline: none;
+    border: 1px solid #c0c0c6;
+}
